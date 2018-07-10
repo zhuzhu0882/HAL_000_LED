@@ -2,6 +2,9 @@
 #include <jni.h>  /* /usr/lib/jvm/java-1.7.0-openjdk-amd64/include/ */
 #include <stdio.h>
 #include <stdlib.h>
+#include <android/log.h>
+
+
  
 #if 0
 typedef struct {
@@ -13,16 +16,18 @@ typedef struct {
 
 jint ledOpen(JNIEnv *env, jobject cls)
 {	
+__android_log_print(ANDROID_LOG_DEBUG,"JNIDemo","native open ...");
 	return 0;
 }
 
 void LedClose(JNIEnv *env, jobject cls)
 {	
-
+__android_log_print(ANDROID_LOG_DEBUG,"JNIDemo","native close ...");
 }
 
 jint LedCtrl(JNIEnv *env, jobject cls,jint which,jint status)
 {	
+__android_log_print(ANDROID_LOG_DEBUG,"JNIDemo","native ctrl:%d,%d",which,status);
 	return 0;
 }
 
