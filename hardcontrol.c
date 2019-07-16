@@ -5,6 +5,7 @@
 #include <android/log.h>
 
 
+//test
  
 #if 0
 typedef struct {
